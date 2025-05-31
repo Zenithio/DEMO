@@ -11,46 +11,53 @@ body {
   color: #222;
   line-height: 1.6;
   padding: 20px;
+  position: relative; /* needed for absolute positioning of side images */
 }
 
 header {
   background-color: #222;
   color: #fff;
-  padding: 10px 20px;
+  padding: 20px 10px;
+  text-align: center;
   border-radius: 8px;
   margin-bottom: 30px;
 }
 
-/* New topbar with logo and side images */
-.topbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
 }
 
-/* Big logo on the left */
-.logo-placeholder {
-  width: 150px;
-  height: 80px;
-  background: #fff0f0;
-  border: 2px dashed #ff6f61;
-  color: #ff6f61;
-  font-weight: 700;
-  font-size: 20px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  user-select: none;
-  cursor: default;
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; /* make sure main content is above side images */
+  background: white;
+  border-radius: 8px;
+  padding: 20px 25px;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
 }
 
-/* Smaller images container on the right */
-.side-images {
+/* Side images container on left */
+.side-images-left,
+.side-images-right {
+  position: fixed;
+  top: 150px; /* adjust vertical position */
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 0; /* behind main content */
+}
+
+/* Left side images */
+.side-images-left {
+  left: 10px;
+}
+
+/* Right side images */
+.side-images-right {
+  right: 10px;
 }
 
 /* Smaller image placeholders */
@@ -77,24 +84,8 @@ header {
   color: #d9443c;
 }
 
-h1 {
-  font-size: 2.5rem;
-  letter-spacing: 3px;
-  text-align: center;
-  margin-top: 0;
-}
-
-main {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 section {
-  background-color: #fff;
-  padding: 20px 25px;
   margin-bottom: 25px;
-  border-radius: 8px;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
 }
 
 h2 {
