@@ -78,3 +78,55 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Logo and image placeholders */
+.logo-placeholder,
+.image-placeholder {
+  border: 2px dashed #ff6f61;
+  background: #fff0f0;
+  color: #ff6f61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  user-select: none;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+/* Big square logo */
+.logo-placeholder {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 30px;
+}
+
+/* Smaller image boxes */
+.image-placeholder {
+  width: 120px;
+  height: 80px;
+  margin-right: 15px;
+  flex-shrink: 0;
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.image-placeholder:last-child {
+  margin-right: 0;
+}
+
+.image-placeholder:hover {
+  background-color: #ffdad6;
+  color: #d9443c;
+}
+  
+/* Container to hold smaller images horizontally */
+.images-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
