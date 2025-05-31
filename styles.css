@@ -1,128 +1,32 @@
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9f9f9;
-  color: #222;
-  line-height: 1.6;
-  padding: 20px;
-  position: relative; /* needed for absolute positioning of side images */
-}
-
 header {
   background-color: #222;
   color: #fff;
   padding: 20px 10px;
-  text-align: center;
   border-radius: 8px;
   margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo-placeholder {
+  width: 80px;
+  height: 80px;
+  border: 2px dashed #ff6f61;
+  background: #fff0f0;
+  color: #ff6f61;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 8px;
 }
 
 h1 {
   font-size: 2.5rem;
   letter-spacing: 3px;
-}
-
-main {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1; /* make sure main content is above side images */
-  background: white;
-  border-radius: 8px;
-  padding: 20px 25px;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
-}
-
-/* Side images container on left */
-.side-images-left,
-.side-images-right {
-  position: fixed;
-  top: 150px; /* adjust vertical position */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 0; /* behind main content */
-}
-
-/* Left side images */
-.side-images-left {
-  left: 10px;
-}
-
-/* Right side images */
-.side-images-right {
-  right: 10px;
-}
-
-/* Smaller image placeholders */
-.image-placeholder {
-  width: 80px;
-  height: 80px;
-  background: #fff0f0;
-  border: 2px dashed #ff6f61;
-  color: #ff6f61;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  user-select: none;
-  cursor: default;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.image-placeholder:hover {
-  background-color: #ffdad6;
-  color: #d9443c;
-}
-
-section {
-  margin-bottom: 25px;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #ff6f61;
-  padding-bottom: 5px;
-  font-weight: 600;
-}
-
-ul {
-  list-style: none;
-}
-
-li {
-  padding: 8px 0;
-  border-bottom: 1px solid #eee;
-  font-weight: 500;
-  color: #444;
-}
-
-li:last-child {
-  border-bottom: none;
-}
-
-a {
-  color: #ff6f61;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #555;
+  margin: 0;
 }
