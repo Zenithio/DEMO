@@ -16,15 +16,72 @@ body {
 header {
   background-color: #222;
   color: #fff;
-  padding: 20px 10px;
-  text-align: center;
+  padding: 10px 20px;
   border-radius: 8px;
   margin-bottom: 30px;
+}
+
+/* New topbar with logo and side images */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Big logo on the left */
+.logo-placeholder {
+  width: 150px;
+  height: 80px;
+  background: #fff0f0;
+  border: 2px dashed #ff6f61;
+  color: #ff6f61;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  user-select: none;
+  cursor: default;
+}
+
+/* Smaller images container on the right */
+.side-images {
+  display: flex;
+  gap: 10px;
+}
+
+/* Smaller image placeholders */
+.image-placeholder {
+  width: 80px;
+  height: 80px;
+  background: #fff0f0;
+  border: 2px dashed #ff6f61;
+  color: #ff6f61;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  user-select: none;
+  cursor: default;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.image-placeholder:hover {
+  background-color: #ffdad6;
+  color: #d9443c;
 }
 
 h1 {
   font-size: 2.5rem;
   letter-spacing: 3px;
+  text-align: center;
+  margin-top: 0;
 }
 
 main {
@@ -78,55 +135,3 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
-
-/* Logo and image placeholders */
-.logo-placeholder,
-.image-placeholder {
-  border: 2px dashed #ff6f61;
-  background: #fff0f0;
-  color: #ff6f61;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1rem;
-  text-transform: uppercase;
-  user-select: none;
-  margin-bottom: 15px;
-  border-radius: 6px;
-}
-
-/* Big square logo */
-.logo-placeholder {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 30px;
-}
-
-/* Smaller image boxes */
-.image-placeholder {
-  width: 120px;
-  height: 80px;
-  margin-right: 15px;
-  flex-shrink: 0;
-  cursor: default;
-  transition: background-color 0.3s ease;
-}
-
-.image-placeholder:last-child {
-  margin-right: 0;
-}
-
-.image-placeholder:hover {
-  background-color: #ffdad6;
-  color: #d9443c;
-}
-  
-/* Container to hold smaller images horizontally */
-.images-row {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
